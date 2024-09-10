@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddktqhwmrevrn"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_wi8xg"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -5.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wi8xg")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 399.0
+offset_right = 370.0
+offset_bottom = 476.0
+text = "Server"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 522.0
+offset_right = 597.0
+offset_bottom = 599.0
+text = "Client"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 843.0
+offset_right = 338.0
+offset_bottom = 920.0
+
+[connection signal="button_down" from="Play" to="." method="Play"]
+[connection signal="button_down" from="Settings" to="." method="Settings"]

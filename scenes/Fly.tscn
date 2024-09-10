@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ikfrfis3h8iu"]
+
+[ext_resource type="Script" path="res://scripts/Fly.cs" id="1_mf28f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqegt"]
+size = Vector2(8, 8)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o4668"]
+size = Vector2(8, 8)
+
+[node name="Fly" type="CharacterBody2D"]
+script = ExtResource("1_mf28f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cqegt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_o4668")
+
+[node name="PositionDebug" type="RichTextLabel" parent="."]
+offset_left = 11.0
+offset_top = -20.0
+offset_right = 114.0
+offset_bottom = 53.0
+text = "X:
+Y:"
